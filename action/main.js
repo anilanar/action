@@ -141,7 +141,7 @@ function runChromatic(options) {
 }
 function run() {
     return __awaiter(this, void 0, void 0, function () {
-        var commit, branch, sha, projectToken, workingDir, buildScriptName, scriptName, exec, skip, doNotStart, storybookPort, storybookUrl, storybookBuildDir, storybookHttps, storybookCert, storybookKey, storybookCa, preserveMissing, autoAcceptChanges, allowConsoleErrors, exitZeroOnChanges, exitOnceUploaded, ignoreLastBuildOnBranch, chromatic, _a, url, code, e_1;
+        var commit, branch, sha, projectToken, workingDir, buildScriptName, scriptName, exec, only, skip, doNotStart, storybookPort, storybookUrl, storybookBuildDir, storybookHttps, storybookCert, storybookKey, storybookCa, preserveMissing, autoAcceptChanges, allowConsoleErrors, exitZeroOnChanges, exitOnceUploaded, ignoreLastBuildOnBranch, chromatic, _a, url, code, e_1;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
@@ -158,6 +158,7 @@ function run() {
                     buildScriptName = core_1.getInput('buildScriptName');
                     scriptName = core_1.getInput('scriptName');
                     exec = core_1.getInput('exec');
+                    only = core_1.getInput('only');
                     skip = core_1.getInput('skip');
                     doNotStart = core_1.getInput('doNotStart');
                     storybookPort = core_1.getInput('storybookPort');
@@ -182,6 +183,7 @@ function run() {
                         buildScriptName: maybe(buildScriptName),
                         scriptName: maybe(scriptName),
                         exec: maybe(exec),
+                        only: maybe(only),
                         skip: maybe(skip),
                         doNotStart: maybe(doNotStart),
                         storybookPort: maybe(storybookPort),
